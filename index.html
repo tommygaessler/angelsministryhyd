@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angels Ministry - Reaching, Leading, and Equipping children for Christ | Hyderabad, India">
+    <title>Angels Ministry | To Reach • To Lead • To Equip</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary: #8c5c3c;
+            --accent: #d4a373;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('./images/cover4.jpg') center/cover no-repeat;
+        }
+        
+        .nav-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #d4a373;
+            transform: translateY(-1px);
+        }
+        
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #d4a373;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .pledge-input {
+            transition: border-color 0.3s ease;
+        }
+        
+        .pledge-input:focus {
+            border-color: #d4a373;
+            box-shadow: 0 0 0 3px rgba(212, 163, 115, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-[#f8f0e5] text-[#3f2a1e]">
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 bg-[#8c5c3c] rounded-2xl flex items-center justify-center text-white text-2xl shadow-inner">
+                    <i class="fa-solid fa-dove"></i>
+                </div>
+                <div>
+                    <span class="text-3xl font-bold heading-font tracking-tighter text-[#8c5c3c]">angels</span>
+                    <span class="text-3xl font-bold heading-font tracking-tighter text-[#3f2a1e] ml-[-4px]">MINISTRY</span>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#mission" class="nav-link">Mission</a>
+                <a href="#ministries" class="nav-link">Ministries</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-x-4">
+                <a href="#partner" 
+                   class="px-6 py-2.5 bg-[#8c5c3c] hover:bg-[#6e492f] text-white text-sm font-semibold rounded-2xl transition-all flex items-center gap-x-2">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    GIVE
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-4">
+            <div class="flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#about" onclick="toggleMobileMenu()" class="py-2">About</a>
+                <a href="#mission" onclick="toggleMobileMenu()" class="py-2">Mission</a>
+                <a href="#ministries" onclick="toggleMobileMenu()" class="py-2">Ministries</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="hero" class="hero-bg h-screen flex items-center text-white relative">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md text-white text-sm px-6 py-2 rounded-3xl mb-8 border border-white/30">
+                <i class="fa-solid fa-dove"></i>
+                MATTHEW 28:19
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold heading-font leading-none mb-6 tracking-tighter">
+                TO REACH<br>TO LEAD<br>TO EQUIP
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-xl md:text-2xl mb-10 text-white/90">
+                God is still sending angels to the broken-hearted children of the world.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#partner" 
+                   class="px-10 py-5 bg-[#d4a373] hover:bg-[#c39a6a] text-[#3f2a1e] font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3 transition-all">
+                    <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
+                    GIVE
+                </a>
+                <a href="#about" 
+                   class="px-10 py-5 border-2 border-white hover:bg-white hover:text-[#3f2a1e] font-medium text-lg rounded-3xl flex items-center justify-center transition-all">
+                    MISSION
+                </a>
+            </div>
+            
+            <div class="mt-16 flex justify-center items-center gap-x-8 text-sm opacity-80">
+                <div class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 99599 05947</span>
+                </div>
+                <div class="h-3 w-px bg-white/50"></div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span><a href="mailto:angelsministryhyd@gmail.com">angelsministryhyd@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pottery accent -->
+        <div class="absolute bottom-10 right-10 hidden lg:block">
+            <img src="./images/food2.JPG" 
+                 alt="Hands shaping clay – symbol of God's work in children's lives"
+                 class="w-40 h-40 object-cover rounded-3xl shadow-2xl rotate-[-8deg] border-8 border-white/80">
+        </div>
+    </header>
+
+    <!-- ABOUT US -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-[#d4a373] font-medium tracking-widest">OUR STORY</span>
+                    <h2 class="text-4xl heading-font font-bold mt-2 mb-8 leading-tight">
+                        God heard the cry of a child in the wilderness
+                    </h2>
+                    <div class="prose text-lg text-[#3f2a1e]/90">
+                        <p>The messenger of God came to help, to comfort, to give hope, love and solution to all the problems. Even still today God is moving with compassion when He hears the cry of a CHILD in remote parts of the developing world and inner cities of the industrialized world. He is looking for angels to send and help the broken-hearted.</p>
+                        <p class="mt-6">God gave us the burden for the lost ones. Angels Ministry is working to bring awareness about child evangelism and equip Sunday School Teachers and Young people with skills and teaching techniques that fulfils God's desire.</p>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="./images/praying2.JPG" 
+                         alt="Children and leaders in ministry together"
+                         class="rounded-3xl shadow-xl">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl max-w-[220px]">
+                        <p class="text-[#8c5c3c] text-sm italic">"We are called to be the angels God sends to the children who cry out."</p>
+                        <div class="text-xs text-gray-500 mt-4">— Angels Ministry Team</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION -->
+    <section id="vision" class="py-20 bg-[#f8f0e5]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="px-5 py-2 bg-[#d4a373]/10 text-[#8c5c3c] text-sm font-semibold rounded-3xl">OUR VISION</span>
+            <h2 class="text-4xl heading-font font-bold mt-6 mb-8">
+                To reach the unreached children with the Gospel
+            </h2>
+            <p class="text-2xl max-w-2xl mx-auto leading-relaxed text-[#3f2a1e]/80">
+                to salvation and make them disciples and leaders in those respective churches as written in Matthew 28:19
+            </p>
+            
+            <div class="mt-12 flex justify-center">
+                <div class="bg-white rounded-3xl px-12 py-8 max-w-md shadow-lg border border-[#d4a373]/20">
+                    <i class="fa-solid fa-dove text-6xl text-[#d4a373] mb-6"></i>
+                    <blockquote class="text-xl italic">"Go therefore and make disciples of all nations..."</blockquote>
+                    <div class="text-right text-sm mt-4 text-[#8c5c3c]">— Matthew 28:19</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION -->
+    <section id="mission" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <span class="text-[#d4a373] font-medium">OUR MISSION</span>
+                <h2 class="text-4xl heading-font font-bold mt-2">How we fulfill God's call</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#f8f0e5] p-8 rounded-3xl card-hover">
+                    <div class="text-4xl mb-6"><i class="fa-solid fa-book-bible"></i></div>
+                    <h3 class="font-semibold text-xl mb-3">Sharing the Gospel</h3>
+                    <p class="text-[#3f2a1e]/80">In Children's Retreats and through every opportunity God gives us.</p>
+                </div>
+                <div class="bg-[#f8f0e5] p-8 rounded-3xl card-hover">
+                    <div class="text-4xl mb-6"><i class="fa-solid fa-person-chalkboard"></i></div>
+                    <h3 class="font-semibold text-xl mb-3">Discipling &amp; Training</h3>
+                    <p class="text-[#3f2a1e]/80">Teaching children to become leaders and equipping parents to raise them in faith.</p>
+                </div>
+                <div class="bg-[#f8f0e5] p-8 rounded-3xl card-hover">
+                    <div class="text-4xl mb-6"><i class="fa-solid fa-toolbox"></i></div>
+                    <h3 class="font-semibold text-xl mb-3">Equipping Leaders</h3>
+                    <p class="text-[#3f2a1e]/80">Training Sunday School teachers and supplying materials for children's ministry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MINISTRIES -->
+    <section id="ministries" class="py-20 bg-[#3f2a1e] text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <span class="px-5 py-2 bg-[#d4a373] text-[#3f2a1e] text-sm font-semibold rounded-3xl">OUR MINISTRIES</span>
+                <h2 class="text-4xl heading-font font-bold mt-6 text-white">Where we serve</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 card-hover">
+                    <i class="fa-solid fa-church text-4xl mb-6"></i>
+                    <h4 class="font-semibold text-xl">Gospel Retreats</h4>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 card-hover">
+                    <i class="fa-solid fa-child text-4xl mb-6"></i>
+                    <h4 class="font-semibold text-xl">VBS / Kids Camps</h4>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 card-hover">
+                    <i class="fa-solid fa-hands-holding-child text-4xl mb-6"></i>
+                    <h4 class="font-semibold text-xl">Juvenile and Orphanage Ministry</h4>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 card-hover">
+                    <i class="fa-solid fa-comments text-4xl mb-6"></i>
+                    <h4 class="font-semibold text-xl">Counseling Ministry</h4>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 card-hover">
+                    <i class="fa-solid fa-graduation-cap text-4xl mb-6"></i>
+                    <h4 class="font-semibold text-xl">Discipling &amp; Leadership Programs</h4>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/10 card-hover md:col-span-2 lg:col-span-1">
+                    <i class="fa-solid fa-book-open text-4xl mb-6"></i>
+                    <h4 class="font-semibold text-xl">Training &amp; Equipping Sunday School Teachers</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-[#d4a373] font-medium">TOOLS FOR MINISTRY</span>
+                    <h2 class="text-4xl heading-font font-bold mt-3 mb-8">Resources we provide</h2>
+                    <ul class="space-y-6 text-lg">
+                        <li class="flex gap-x-4 items-start"><i class="fa-solid fa-check text-[#d4a373] mt-1"></i> Sunday School Curriculum</li>
+                        <li class="flex gap-x-4 items-start"><i class="fa-solid fa-check text-[#d4a373] mt-1"></i> Teachers Tool Kit</li>
+                        <li class="flex gap-x-4 items-start"><i class="fa-solid fa-check text-[#d4a373] mt-1"></i> Summer Ministry Materials</li>
+                        <li class="flex gap-x-4 items-start"><i class="fa-solid fa-check text-[#d4a373] mt-1"></i> Kids-Camp Material</li>
+                        <li class="flex gap-x-4 items-start"><i class="fa-solid fa-check text-[#d4a373] mt-1"></i> Magazine &amp; Kids Coloring Books</li>
+                    </ul>
+                </div>
+                
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <img src="./images/color.JPG" alt="VBS Materials" class="rounded-3xl shadow-lg">
+                        <img src="./images/show.JPG" alt="Teacher's Tool Kit" class="rounded-3xl shadow-lg">
+                        <img src="./images/training.JPG" alt="Children enjoying resources" class="rounded-3xl shadow-lg md:col-span-1 col-span-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNER / PLEDGE -->
+    <section id="partner" class="py-20 bg-[#f8f0e5]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="text-[#d4a373]">HOW CAN WE PARTNER TOGETHER?</span>
+                <h2 class="text-4xl heading-font font-bold mt-4">Will you be a part of it?</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Ways to partner -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-8">Four ways to join us</h3>
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="text-5xl text-[#d4a373] font-light">01</div>
+                            <div>
+                                <p class="font-medium">Suggest programs for children's ministry in your church</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-5xl text-[#d4a373] font-light">02</div>
+                            <div>
+                                <p class="font-medium">Train your Sunday school teachers</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-5xl text-[#d4a373] font-light">03</div>
+                            <div>
+                                <p class="font-medium">Partner with us by prayer and participating in programs</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-5xl text-[#d4a373] font-light">04</div>
+                            <div>
+                                <p class="font-medium">Support financially</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pledge form -->
+                <div class="bg-white rounded-3xl p-10 shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-6 flex items-center gap-x-3">
+                        <i class="fa-solid fa-hand-holding-heart"></i> My Pledge for Support
+                    </h3>
+
+                    <a href="https://admin.newhorizonsfoundation.com/donation/create/2987" target="_blank"
+                            class="w-full py-6 bg-[#8c5c3c] text-white font-semibold rounded-3xl flex items-center justify-center gap-x-3 hover:bg-[#6e492f] transition-all text-lg">
+                        GIVE
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY / IMPACT -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-center text-4xl heading-font font-bold mb-12">Lives Being Transformed</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <img src="./images/food.JPG" alt="Children in ministry" class="rounded-3xl aspect-square object-cover shadow-xl">
+                <img src="./images/laughing.JPG" alt="VBS kids camp" class="rounded-3xl aspect-square object-cover shadow-xl">
+                <img src="./images/praying.JPG" alt="Training session" class="rounded-3xl aspect-square object-cover shadow-xl">
+                <img src="./images/cover7.JPG" alt="Group of leaders and children" class="rounded-3xl aspect-square object-cover shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 bg-[#3f2a1e] text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl heading-font font-bold mb-6">Get in touch with us</h2>
+            <p class="text-2xl mb-12">We would love to pray with you and explore how we can serve together.</p>
+
+            <p class="text-[#d4a373]">Hyderabad, India</p>
+
+            <p class="text-3xl font-medium">+91 99599 05947</p>
+
+            <a href="mailto:angelsministryhyd@gmail.com" class="text-3xl font-medium">angelsministryhyd@gmail.com</a>
+    
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#f8f0e5] py-12 border-t">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm">
+            <p class="text-[#3f2a1e]/70">© 2026 Angels Ministry. All glory to God.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script initialization
+        function initializeTailwind() {
+            // Already loaded via CDN
+            console.log('%c✅ Angels Ministry website ready!', 'color:#d4a373; font-family:monospace; font-size:13px');
+        }
+        
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Init
+        window.onload = initializeTailwind;
+    </script>
+</body>
+</html>
